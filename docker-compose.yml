@@ -42,7 +42,7 @@ services:
       - MARIADB_ROOT_PASSWORD=mariadb
     restart: unless-stopped
     healthcheck:                              # Ensures the DB is up before the server.
-      test: ["CMD", "mariadb-admin", "ping", "-u", "librum", "-p'mariadb'", "-h", "localhost"]
+      test: ["CMD", "mariadb-admin", "ping", "-u", "librum", "-p", "mariadb", "-h", "localhost"]
       interval: 20s
       timeout: 40s
       retries: 3
